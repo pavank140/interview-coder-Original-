@@ -9,7 +9,7 @@ import { ScreenshotHelper } from "./ScreenshotHelper";
 import { ShortcutsHelper } from "./shortcuts";
 
 // Set the app name that appears in task manager
-app.setName("Background Process Manager(1)");
+app.setName("testing_v1");
 
 // Constants
 const isDev = !app.isPackaged;
@@ -151,7 +151,7 @@ async function createWindow(): Promise<void> {
       // In development, retry loading after a short delay
       console.log("Retrying to load development server...");
       setTimeout(() => {
-        state.mainWindow?.loadURL("http://localhost:54321").catch((error) => {
+        state.mainWindow?.loadURL("http://localhost:5173").catch((error) => {
           console.error("Failed to load dev server on retry:", error);
         });
       }, 1000);
@@ -160,7 +160,7 @@ async function createWindow(): Promise<void> {
 
   if (isDev) {
     // In development, load from the dev server
-    state.mainWindow.loadURL("http://localhost:54321").catch((error) => {
+    state.mainWindow.loadURL("http://localhost:5173").catch((error) => {
       console.error("Failed to load dev server:", error);
     });
   } else {

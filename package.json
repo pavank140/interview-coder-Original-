@@ -1,7 +1,10 @@
 {
-  "name": "interview-coder-v1",
+  "name": "testing_v1",
   "version": "1.0.25",
   "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "electron ."
+  },
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2,
@@ -18,7 +21,7 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "An invisible desktop application to help you pass your technical interviews.",
+  "description": "An helping desktop application for all your questions.",
   "dependencies": {
     "@electron/notarize": "^2.3.0",
     "@emotion/react": "^11.11.0",
@@ -63,5 +66,8 @@
   },
   "engines": {
     "node": "^20.0.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1"
   }
 }

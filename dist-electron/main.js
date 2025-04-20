@@ -67,7 +67,7 @@ const ProcessingHelper_1 = require("./ProcessingHelper");
 const ScreenshotHelper_1 = require("./ScreenshotHelper");
 const shortcuts_1 = require("./shortcuts");
 // Set the app name that appears in task manager
-electron_1.app.setName("Background Process Manager(1)");
+electron_1.app.setName("testing_v1");
 // Constants
 const isDev = !electron_1.app.isPackaged;
 // Application State
@@ -196,7 +196,7 @@ async function createWindow() {
             // In development, retry loading after a short delay
             console.log("Retrying to load development server...");
             setTimeout(() => {
-                state.mainWindow?.loadURL("http://localhost:54321").catch((error) => {
+                state.mainWindow?.loadURL("http://localhost:5173").catch((error) => {
                     console.error("Failed to load dev server on retry:", error);
                 });
             }, 1000);
@@ -204,7 +204,7 @@ async function createWindow() {
     });
     if (isDev) {
         // In development, load from the dev server
-        state.mainWindow.loadURL("http://localhost:54321").catch((error) => {
+        state.mainWindow.loadURL("http://localhost:5173").catch((error) => {
             console.error("Failed to load dev server:", error);
         });
     }

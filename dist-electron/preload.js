@@ -21,7 +21,7 @@ exports.PROCESSING_EVENTS = {
 console.log("Preload script is running");
 const electronAPI = {
     openSubscriptionPortal: async (authData) => {
-        return electron_1.ipcRenderer.invoke("open-subscription-portal", authData);
+        return electron_1.ipcRenderer.invoke("opensubscription-portal",authData);
     },
     openSettingsPortal: () => electron_1.ipcRenderer.invoke("open-settings-portal"),
     updateContentDimensions: (dimensions) => electron_1.ipcRenderer.invoke("update-content-dimensions", dimensions),
