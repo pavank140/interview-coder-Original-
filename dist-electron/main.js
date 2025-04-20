@@ -174,7 +174,7 @@ async function createWindow() {
         frame: false,
         transparent: true,
         fullscreenable: false,
-        hasShadow: false,
+        hasShadow: true,
         backgroundColor: "#00000000",
         focusable: true,
         skipTaskbar: true,

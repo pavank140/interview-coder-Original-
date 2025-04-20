@@ -216,7 +216,9 @@ const electronAPI = {
     }
   },
   setIgnoreMouseEvents: (ignore: boolean, options?: { forward: boolean }) =>
-    ipcRenderer.invoke("set-ignore-mouse-events", ignore, options)
+    ipcRenderer.invoke("set-ignore-mouse-events", ignore, options),
+  getImagePreview: (filepath: string) =>
+    ipcRenderer.invoke("get-image-preview", filepath),
 } as ElectronAPI
 
 // Expose the API

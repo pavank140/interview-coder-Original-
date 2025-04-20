@@ -1,6 +1,7 @@
 // ipcHandlers.ts
 
 import { ipcMain, shell } from "electron";
+import { getImagePreview } from "./main";
 
 export function initializeIpcHandlers({
   getMainWindow,
@@ -12,6 +13,10 @@ export function initializeIpcHandlers({
   getView,
 }: any): void {
   console.log("Initializing IPC handlers");
+  ipcMain.handle("get-image-preview", async (_event, filepath) => {
+    return await getImagePreview(filepath);
+  });
+
 
   // Platform handler
   ipcMain.handle("get-platform", () => {
